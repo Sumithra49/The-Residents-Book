@@ -1,5 +1,5 @@
-import  { useEffect, useState } from "react";
-import "./App.css"; // 👈 External CSS imported
+import { useEffect, useState } from "react";
+import "./App.css";
 
 function App() {
   const [residents, setResidents] = useState([]);
@@ -14,7 +14,9 @@ function App() {
 
   const fetchResidents = async () => {
     try {
-      const res = await fetch("http://localhost:3000/residents");
+      const res = await fetch(
+        "https://the-residents-book-7m8j.onrender.com/residents"
+      );
       const data = await res.json();
       setResidents(data);
     } catch (err) {
@@ -35,11 +37,14 @@ function App() {
     }
 
     try {
-      const res = await fetch("http://localhost:3000/residents", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
+      const res = await fetch(
+        "https://the-residents-book-7m8j.onrender.com/residents",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(formData),
+        }
+      );
 
       if (res.ok) {
         const newResident = await res.json();
@@ -70,7 +75,10 @@ function App() {
     <div className="container">
       <h1 className="title">The Residents Book</h1>
 
-      <button className="add-button" onClick={() => setShowForm((prev) => !prev)}>
+      <button
+        className="add-button"
+        onClick={() => setShowForm((prev) => !prev)}
+      >
         {showForm ? "Close Form" : "Add Resident"}
       </button>
 
@@ -114,7 +122,9 @@ function App() {
             value={formData.linkedin}
             onChange={handleChange}
           />
-          <button type="submit" className="submit-button">Submit</button>
+          <button type="submit" className="submit-button">
+            Submit
+          </button>
         </form>
       )}
 
@@ -129,7 +139,9 @@ function App() {
               alt={`${res.firstName} ${res.lastName}`}
               className="profile-img"
             />
-            <h3>{res.firstName} {res.lastName}</h3>
+            <h3>
+              {res.firstName} {res.lastName}
+            </h3>
             <p>{res.title}</p>
             {res.linkedin && (
               <a href={res.linkedin} target="_blank" rel="noopener noreferrer">
