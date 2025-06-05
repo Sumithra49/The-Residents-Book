@@ -1,9 +1,9 @@
 # The-Residents-Book
-A sleek and interactive web app where individuals can showcase themselves in a public-facing directory. Users can view scrolling resident profiles and contribute their own with a simple form submission.
+The Residents Book is a simple, elegant one-page website where individuals can add themselves to a public-facing profile book by submitting a small form with their personal and social information
 
  # deployment link
  - backend:https://the-residents-book-7m8j.onrender.com
- - frontend:https://the-residents-book.vercel.app/
+ - frontend:https://the-residents-book-i1cv.vercel.app/
 ## Features
 
 - ✅ View all current residents in a continuously scrolling list
