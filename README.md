@@ -32,5 +32,11 @@ A simple, elegant one-page website where individuals can add themselves to a pub
 ![image](https://github.com/user-attachments/assets/cda3998e-887d-4427-8935-a968080778d4)
 # Responsive 
 ![image](https://github.com/user-attachments/assets/9b258cd0-42e7-4497-82e6-7841e59d9172)
+# normal
+![image](https://github.com/user-attachments/assets/ae6b07ca-e953-44e6-921c-1524ee1ce7b2)
+ # Zoom In
+ 
+![image](https://github.com/user-attachments/assets/361a0142-499d-4fdf-99a7-4528dc296cee)
+
 
 
