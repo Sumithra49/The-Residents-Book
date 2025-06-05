@@ -1,18 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=STIX+Two+Text:wght@400&display=swap');
 
 body {
   margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'STIX Two Text', serif;
   background: #f9f9f9;
+  color: #181818;
 }
 
 .container {
   padding: 2rem;
   text-align: center;
 }
+.header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  margin-left: 600px;
+  margin-top: 40px;
+  
+}
+
+.header img {
+  height: 30px;
+  margin-top: -20px; 
+ 
+}
+
+
 
 .title {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+  font-size: 2.5rem;       
+  margin-bottom: 1rem;     
+  letter-spacing: -1.6px;   
+  color:#000000;           
+  font-family: 'Manrope', sans-serif; 
+  margin-top: -5px;         
+  margin-left: 0;
 }
 
 .add-button {
@@ -29,7 +53,6 @@ body {
 .add-button:hover {
   transform: scale(1.05);
 }
-
 
 .modal-form {
   background: white;
@@ -65,25 +88,40 @@ body {
 
 
 .residents-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1.5rem;
+  overflow: hidden; 
+  width: 100%;
+  background: #f9f9f9;
+  position: relative;
+  white-space: nowrap;
+  display: block;
   margin-top: 2rem;
+  padding: 1rem 0;
+}
+
+.residents-scroll {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scrollLeft 30s linear infinite;
 }
 
 .resident-card {
+  display: inline-block;
+  vertical-align: top;
+  width: 220px;
+  margin-right: 1.5rem;
   background: white;
   padding: 1rem;
-  width: 220px;
   border-radius: 10px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
   transition: transform 0.3s;
+  scroll-snap-align: start; 
 }
 
 .resident-card:hover {
-  transform: translateY(-5px);
+  transform: scale(1.10) translateY(0);
+  background-color: rgb(230, 184, 140);
 }
+
 
 .profile-img {
   width: 100px;
@@ -93,6 +131,14 @@ body {
   margin-bottom: 10px;
 }
 
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
 
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }

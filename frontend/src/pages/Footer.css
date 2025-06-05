@@ -1,0 +1,76 @@
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 2rem;
+  background-color: #f9f9f9;
+  border-top: 1px solid #e0e0e0;
+  font-family: 'Manrope', sans-serif;
+  color: #181818;
+  position: relative;
+}
+
+.footer-left {
+  max-width: 250px;
+}
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.footer-logo {
+  width: 25px;
+  height: auto;
+}
+
+
+
+.footer-left h3 {
+  font-weight: 600;
+  font-size: 1.25rem;
+  margin: 0.5rem 0;
+}
+
+.footer-left p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer-socials .icon {
+  font-size: 1.25rem;
+  text-decoration: none;
+  color: black;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: right;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: rgb(57, 57, 57);
+  font-size: 1rem;
+}
+
+.footer-links a:hover {
+ font-weight: 600;
+}
+
+.footer-bottom {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.85rem;
+  color: #333;
+  text-align: center;
+}

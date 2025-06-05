@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import "./App.css";
+import Footer from "./pages/Footer";
+import Navbar from "./pages/Navbar";
 
 function App() {
   const [residents, setResidents] = useState([]);
@@ -73,7 +75,16 @@ function App() {
 
   return (
     <div className="container">
-      <h1 className="title">The Residents Book</h1>
+      <Navbar />
+      <div className="header">
+        <img
+          src="https://cdn.prod.website-files.com/62f41dee5606d80f65b7dcbb/6676ffc8dcc184ba44858820_the_residency_logo.svg"
+          alt="The Residency Logo"
+        />
+        <div className="title" style={{ fontSize: "30px" }}>
+          The Residency
+        </div>
+      </div>
 
       <button
         className="add-button"
@@ -129,28 +140,35 @@ function App() {
       )}
 
       <div className="residents-list">
-        {residents.map((res) => (
-          <div className="resident-card fade-in" key={res._id}>
-            <img
-              src={
-                res.profilePhoto ||
-                "https://res.cloudinary.com/demo/image/upload/default-profile.jpg"
-              }
-              alt={`${res.firstName} ${res.lastName}`}
-              className="profile-img"
-            />
-            <h3>
-              {res.firstName} {res.lastName}
-            </h3>
-            <p>{res.title}</p>
-            {res.linkedin && (
-              <a href={res.linkedin} target="_blank" rel="noopener noreferrer">
-                LinkedIn
-              </a>
-            )}
-          </div>
-        ))}
+        <div className="residents-scroll">
+          {[...residents, ...residents].map((res, idx) => (
+            <div className="resident-card fade-in" key={res._id + "-" + idx}>
+              <img
+                src={
+                  res.profilePhoto ||
+                  "https://res.cloudinary.com/demo/image/upload/default-profile.jpg"
+                }
+                alt={`${res.firstName} ${res.lastName}`}
+                className="profile-img"
+              />
+              <h3>
+                {res.firstName} {res.lastName}
+              </h3>
+              <p>{res.title}</p>
+              {res.linkedin && (
+                <a
+                  href={res.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  LinkedIn
+                </a>
+              )}
+            </div>
+          ))}
+        </div>
       </div>
+      <Footer />
     </div>
   );
 }
