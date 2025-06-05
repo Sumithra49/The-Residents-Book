@@ -1,20 +1,28 @@
 # The-Residents-Book
-A simple, elegant one-page website where individuals can add themselves to a public-facing profile book by submitting their personal and social information.
+A sleek and interactive web app where individuals can showcase themselves in a public-facing directory. Users can view scrolling resident profiles and contribute their own with a simple form submission.
+
  # deployment link
  - backend:https://the-residents-book-7m8j.onrender.com
  - frontend:https://the-residents-book.vercel.app/
 ## Features
 
-- Popup form to add residents with required fields (First Name, Last Name, Title)
--  profile photo URL and LinkedIn link
-- Live resident list with profile images, full names, roles, and LinkedIn links
-- Responsive and clean UI with subtle animations
-- Backend powered by Express.js and MongoDB
+- ✅ View all current residents in a continuously scrolling list
+
+- ➕ Add yourself to the book via a modal form
+
+- ✨ Smooth hover and animation effects
+
+- 📱 Fully responsive and mobile-friendly
+
+- 🔗 Includes LinkedIn profile support
+
+- 💅 Custom styling with STIX Two Text and Manrope fonts
 
 ---
 # Folder structure
 ![image](https://github.com/user-attachments/assets/7c3482cd-464a-4c29-8154-eac68f81e4cc)
-![image](https://github.com/user-attachments/assets/380737a1-578a-4e4c-826b-459b90ca6386)
+![image](https://github.com/user-attachments/assets/a339df45-2679-496c-8f0b-04cc3699389d)
+
 
 
 
@@ -24,6 +32,42 @@ A simple, elegant one-page website where individuals can add themselves to a pub
 - Backend: Node.js, Express.js
 - Database: MongoDB Atlas
 - Styling: CSS with animations
+  # Backend API Endpoints
+- GET /residents - Get all resident entries
+
+- POST /residents – Add a new resident
+#  UI Components
+## 🧭 Navbar
+- Fixed top bar
+
+- Includes Apply Now CTA with hover animation
+
+# 👤 Resident Cards
+- Scroll horizontally across the screen
+
+- Each card includes:
+
+- Profile photo
+
+- Name and title
+
+- LinkedIn button (if provided)
+
+- Hover effect: zoom-in + background highlight
+
+# ➕ Modal Form
+- Add new resident
+
+- Fields: First Name, Last Name, Title, Profile Photo URL, LinkedIn
+
+- Submits to backend API via POST /residents
+
+# 👣 Footer
+- Left: branding and description
+
+- Right: social links and internal navigation
+
+- Bottom: copyright
 
   # Screenshot
   # UI
