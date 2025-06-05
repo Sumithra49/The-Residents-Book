@@ -26,18 +26,23 @@ A simple, elegant one-page website where individuals can add themselves to a pub
 - Styling: CSS with animations
 
   # Screenshot
-  - UI
+  # UI
+  ![image](https://github.com/user-attachments/assets/dba62aa2-224c-4074-9ff2-89f4d8dae11e)
 
-![image](https://github.com/user-attachments/assets/7185483f-6497-49ee-9a20-453747c2e2c8)
+
+# Navbar
+![image](https://github.com/user-attachments/assets/7963e5b5-1132-4fc4-8fb0-a67734c3a3dd)
+
 # Pop up Form
 ![image](https://github.com/user-attachments/assets/cda3998e-887d-4427-8935-a968080778d4)
-# Responsive 
-![image](https://github.com/user-attachments/assets/9b258cd0-42e7-4497-82e6-7841e59d9172)
-# normal
-![image](https://github.com/user-attachments/assets/ae6b07ca-e953-44e6-921c-1524ee1ce7b2)
- # Zoom In
- 
-![image](https://github.com/user-attachments/assets/361a0142-499d-4fdf-99a7-4528dc296cee)
+ # Hover the cart zoom in and background color change
+ ![image](https://github.com/user-attachments/assets/ca4d1a0b-90de-4c28-9ec6-4a52aa689693)
+
+# Footer
+![image](https://github.com/user-attachments/assets/d2c7460c-77fe-4220-8540-84f6652e1657)
+
+
+
 
 
 
