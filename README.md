@@ -6,17 +6,14 @@ The Residents Book is a simple, elegant one-page website where individuals can a
  - frontend:https://the-residents-book-vblk.vercel.app/
 ## Features
 
-- ✅ View all current residents in a continuously scrolling list
-
+- ✅ View all current residents in a continuously scrolling horizontal list (top and bottom rows)
 - ➕ Add yourself to the book via a modal form
-
-- ✨ Smooth hover and animation effects
-
-- 📱 Fully responsive and mobile-friendly
-
-- 🔗 Includes LinkedIn profile support
-
+- ✨ Smooth hover and fade-in animation effects on resident cards
+- 📱 Fully responsive and mobile-friendly design
+- 🔗 LinkedIn and Twitter profile support for each resident
 - 💅 Custom styling with STIX Two Text and Manrope fonts
+- 🔄 Hamburger menu for navigation on smaller screens
+- 🛑 Form validation for required fields (First Name, Last Name, Title)
 
 ---
 # Folder structure
@@ -28,48 +25,79 @@ The Residents Book is a simple, elegant one-page website where individuals can a
 
 ## Tech Stack
 
-- Frontend: React.js
-- Backend: Node.js, Express.js
-- Database: MongoDB Atlas
-- Styling: CSS with animations
-  # Backend API Endpoints
-- GET /residents - Get all resident entries
+- **Frontend:** React.js, React Icons
+- **Backend:** Node.js, Express.js (API endpoints)
+- **Database:** MongoDB Atlas
+- **Styling:** CSS (including animations and responsive design)
+ ## API Endpoints
 
-- POST /residents – Add a new resident
+- `GET /residents`  
+  Fetch all resident entries.
+
+- `POST /residents`  
+  Add a new resident with the following JSON payload:  
+  ```json
+  {
+    "firstName": "string",
+    "lastName": "string",
+    "title": "string",
+    "profilePhoto": "string (URL, optional)",
+    "linkedin": "string (URL, optional)",
+    "twitter": "string (URL, optional)"
+  }
 #  UI Components
 ## 🧭 Navbar
 - Fixed top bar
 
-- Includes Apply Now CTA with hover animation
+- Hamburger menu toggle for smaller screens.
+
+- Navigation links: Home, About Us, Add Resident (opens modal form), Donate, Inspire.
 
 # 👤 Resident Cards
-- Scroll horizontally across the screen
+- Displayed in two horizontally scrolling rows.
 
 - Each card includes:
 
-- Profile photo
+- Profile photo (or default placeholder)
 
-- Name and title
+- Full name and title
 
-- LinkedIn & Twitter icons (clickable if URL is present))
+- LinkedIn and Twitter icons (linked if URLs provided, disabled otherwise)
 
-- Hover effect: zoom-in + background highlight
+- Hover effect: zoom-in with background highlight.
 
+- Fade-in animation on load.
 # ➕ Modal Form
-Submit a new resident entry
+# Fields:
 
-Fields: First Name, Last Name, Title, Profile Photo URL, LinkedIn URL,Twitter URL
+- First Name* (required)
 
-Submits to /residents endpoint
+- Last Name* (required)
+
+- Title / Role* (required)
+
+- Profile Photo URL (optional)
+
+- LinkedIn URL (optional)
+
+- Twitter URL (optional)
+
+- Validates required fields.
+
+- Submits new resident data to backend API.
+
+- Closes form and resets on successful submission.
 
 
 
 # 👣 Footer
-- Left: branding and description
+- Branding and tagline on the left.
 
-- Right: social links and internal navigation
+- Social media links with icons.
 
-- Bottom: copyright
+- Site navigation links.
+
+- Copyright notice.
 
   # Screenshot
   # UI
