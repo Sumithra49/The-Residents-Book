@@ -71,21 +71,32 @@ The Residents Book is a simple, elegant one-page website where individuals can a
 
   # Screenshot
   # UI
- ![image](https://github.com/user-attachments/assets/980806a5-e973-4493-8892-46dadbbabbf4)
-
-
-![image](https://github.com/user-attachments/assets/020ffe3d-dbe4-4e0a-8166-ad8df5bb1b44)
-
-# Navbar
-![image](https://github.com/user-attachments/assets/7963e5b5-1132-4fc4-8fb0-a67734c3a3dd)
-
-# Pop up Form
-![image](https://github.com/user-attachments/assets/cda3998e-887d-4427-8935-a968080778d4)
- # Hover the cart zoom in and background color change
- ![image](https://github.com/user-attachments/assets/ca4d1a0b-90de-4c28-9ec6-4a52aa689693)
+![image](https://github.com/user-attachments/assets/93dc6b12-710b-4b9a-8280-c3983f08b1b6)
+ # Navbar
+ ![image](https://github.com/user-attachments/assets/c9aedc2d-21bc-47f3-ae44-e89ebe57a86b)
+# Add resident form
+![image](https://github.com/user-attachments/assets/7e8a7322-f49e-4b31-886d-01509b644799)
+# Resident list
+![image](https://github.com/user-attachments/assets/74e0c08a-94ea-4807-bc8a-1869269ade82)
+# when hover the card zoom and background color change
+![image](https://github.com/user-attachments/assets/66bd9288-1544-4017-ae5f-a95836e92357)
 
 # Footer
 ![image](https://github.com/user-attachments/assets/d2c7460c-77fe-4220-8540-84f6652e1657)
+
+# responsive
+![image](https://github.com/user-attachments/assets/f2b4f1f4-b68a-4b9b-9658-c103c582d33f)
+ # navbar
+ ![image](https://github.com/user-attachments/assets/2978fbc2-51c3-4e67-95df-4122f01d41d9)
+ # Navbar and footer
+ ![image](https://github.com/user-attachments/assets/8aa178a4-66c5-48bd-98a3-a9c04012358f)
+ # form
+ ![image](https://github.com/user-attachments/assets/6d298285-bc1e-4682-bb24-5e020dcff000)
+
+
+
+
+
 
 
 
