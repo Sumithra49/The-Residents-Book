@@ -51,16 +51,18 @@ The Residents Book is a simple, elegant one-page website where individuals can a
 
 - Name and title
 
-- LinkedIn button (if provided)
+- LinkedIn & Twitter icons (clickable if URL is present))
 
 - Hover effect: zoom-in + background highlight
 
 # ➕ Modal Form
-- Add new resident
+Submit a new resident entry
 
-- Fields: First Name, Last Name, Title, Profile Photo URL, LinkedIn
+Fields: First Name, Last Name, Title, Profile Photo URL, LinkedIn URL,Twitter URL
 
-- Submits to backend API via POST /residents
+Submits to /residents endpoint
+
+
 
 # 👣 Footer
 - Left: branding and description
