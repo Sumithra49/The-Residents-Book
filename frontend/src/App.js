@@ -13,7 +13,7 @@ function App() {
     title: "",
     profilePhoto: "",
     linkedin: "",
-    twitter: "", // Added Twitter
+    twitter: "",
   });
 
   const fetchResidents = async () => {
@@ -95,7 +95,7 @@ function App() {
         className="add-button"
         onClick={() => setShowForm((prev) => !prev)}
       >
-        {showForm ? "Close Form" : "Apply Now"}
+        {showForm ? "Close Form" : "add resident"}
       </button>
 
       {showForm && (
@@ -171,6 +171,39 @@ function App() {
                 {res.firstName} {res.lastName}
               </h3>
               <p>{res.title}</p>
+              <div className="social-icons">
+                {res.linkedin ? (
+                  <a
+                    href={res.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="social-icon"
+                    title="LinkedIn"
+                  >
+                    <FaLinkedin size={20} />
+                  </a>
+                ) : (
+                  <span className="social-icon disabled" title="No LinkedIn">
+                    <FaLinkedin size={20} />
+                  </span>
+                )}
+
+                {res.twitter ? (
+                  <a
+                    href={res.twitter}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="social-icon"
+                    title="Twitter"
+                  >
+                    <FaTwitter size={20} />
+                  </a>
+                ) : (
+                  <span className="social-icon disabled" title="No Twitter">
+                    <FaTwitter size={20} />
+                  </span>
+                )}
+              </div>
             </div>
           ))}
         </div>

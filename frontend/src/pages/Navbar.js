@@ -31,7 +31,7 @@ const Navbar = ({ onApplyNowClick }) => {
         </li>
         <li>
           <a href="#" className="nav-link apply-now" onClick={onApplyNowClick}>
-            apply now
+            add resident
           </a>
         </li>
         <li>
