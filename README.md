@@ -3,7 +3,7 @@ The Residents Book is a simple, elegant one-page website where individuals can a
 
  # deployment link
  - backend:https://the-residents-book-7m8j.onrender.com
- - frontend:https://the-residents-book-i1cv.vercel.app/
+ - frontend:[https://the-residents-book-i1cv.vercel.app/](https://the-residents-book-vidv.vercel.app/)
 ## Features
 
 - ✅ View all current residents in a continuously scrolling list
@@ -71,8 +71,10 @@ The Residents Book is a simple, elegant one-page website where individuals can a
 
   # Screenshot
   # UI
-  ![image](https://github.com/user-attachments/assets/dba62aa2-224c-4074-9ff2-89f4d8dae11e)
+ ![image](https://github.com/user-attachments/assets/980806a5-e973-4493-8892-46dadbbabbf4)
 
+
+![image](https://github.com/user-attachments/assets/020ffe3d-dbe4-4e0a-8166-ad8df5bb1b44)
 
 # Navbar
 ![image](https://github.com/user-attachments/assets/7963e5b5-1132-4fc4-8fb0-a67734c3a3dd)
