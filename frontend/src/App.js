@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { FaLinkedin, FaTwitter } from "react-icons/fa";
 import "./App.css";
 import Footer from "./pages/Footer";
 import Navbar from "./pages/Navbar";
@@ -12,6 +13,7 @@ function App() {
     title: "",
     profilePhoto: "",
     linkedin: "",
+    twitter: "", // Added Twitter
   });
 
   const fetchResidents = async () => {
@@ -57,6 +59,7 @@ function App() {
           title: "",
           profilePhoto: "",
           linkedin: "",
+          twitter: "",
         });
         setShowForm(false);
         alert("Resident added!");
@@ -75,11 +78,13 @@ function App() {
 
   return (
     <div className="container">
-      <Navbar />
+      <Navbar onApplyNowClick={() => setShowForm(true)} />
+
       <div className="header">
         <img
           src="https://cdn.prod.website-files.com/62f41dee5606d80f65b7dcbb/6676ffc8dcc184ba44858820_the_residency_logo.svg"
           alt="The Residency Logo"
+          style={{ height: "30px" }}
         />
         <div className="title" style={{ fontSize: "30px" }}>
           The Residency
@@ -90,7 +95,7 @@ function App() {
         className="add-button"
         onClick={() => setShowForm((prev) => !prev)}
       >
-        {showForm ? "Close Form" : "Add Resident"}
+        {showForm ? "Close Form" : "Apply Now"}
       </button>
 
       {showForm && (
@@ -133,16 +138,27 @@ function App() {
             value={formData.linkedin}
             onChange={handleChange}
           />
+          <input
+            type="text"
+            name="twitter"
+            placeholder="Twitter URL"
+            value={formData.twitter}
+            onChange={handleChange}
+          />
           <button type="submit" className="submit-button">
             Submit
           </button>
         </form>
       )}
 
+      {/* Top Row */}
       <div className="residents-list">
         <div className="residents-scroll">
-          {[...residents, ...residents].map((res, idx) => (
-            <div className="resident-card fade-in" key={res._id + "-" + idx}>
+          {[...residents, ...residents].map((res, index) => (
+            <div
+              className="resident-card fade-in"
+              key={`${res._id}-top-${index}`}
+            >
               <img
                 src={
                   res.profilePhoto ||
@@ -155,19 +171,68 @@ function App() {
                 {res.firstName} {res.lastName}
               </h3>
               <p>{res.title}</p>
-              {res.linkedin && (
-                <a
-                  href={res.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  LinkedIn
-                </a>
-              )}
+            </div>
+          ))}
+        </div>
+
+        {/* Bottom Row */}
+        <div className="residents-scroll bottom-row">
+          {[...residents, ...residents].map((res, index) => (
+            <div
+              className="resident-card fade-in"
+              key={`${res._id}-bottom-${index}`}
+            >
+              <img
+                src={
+                  res.profilePhoto ||
+                  "https://res.cloudinary.com/demo/image/upload/default-profile.jpg"
+                }
+                alt={`${res.firstName} ${res.lastName}`}
+                className="profile-img"
+              />
+              <h3>
+                {res.firstName} {res.lastName}
+              </h3>
+              <p>{res.title}</p>
+
+              <div className="social-icons">
+                {res.linkedin ? (
+                  <a
+                    href={res.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="social-icon"
+                    title="LinkedIn"
+                  >
+                    <FaLinkedin size={20} />
+                  </a>
+                ) : (
+                  <span className="social-icon disabled" title="No LinkedIn">
+                    <FaLinkedin size={20} />
+                  </span>
+                )}
+
+                {res.twitter ? (
+                  <a
+                    href={res.twitter}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="social-icon"
+                    title="Twitter"
+                  >
+                    <FaTwitter size={20} />
+                  </a>
+                ) : (
+                  <span className="social-icon disabled" title="No Twitter">
+                    <FaTwitter size={20} />
+                  </span>
+                )}
+              </div>
             </div>
           ))}
         </div>
       </div>
+
       <Footer />
     </div>
   );

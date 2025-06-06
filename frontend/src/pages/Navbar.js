@@ -1,9 +1,24 @@
+import { useState } from "react";
 import "./Navbar.css";
 
-const Navbar = () => {
+const Navbar = ({ onApplyNowClick }) => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <nav className="navbar">
-      <ul className="nav-list">
+      {/* Hamburger button */}
+      <button
+        className="hamburger"
+        onClick={() => setMenuOpen(!menuOpen)}
+        aria-label="Toggle menu"
+      >
+        <span className="bar"></span>
+        <span className="bar"></span>
+        <span className="bar"></span>
+      </button>
+
+      {/* Navigation Links */}
+      <ul className={`nav-list ${menuOpen ? "open" : ""}`}>
         <li>
           <a href="#" className="nav-link underline">
             home
@@ -15,7 +30,7 @@ const Navbar = () => {
           </a>
         </li>
         <li>
-          <a href="#" className="nav-link apply-now">
+          <a href="#" className="nav-link apply-now" onClick={onApplyNowClick}>
             apply now
           </a>
         </li>
